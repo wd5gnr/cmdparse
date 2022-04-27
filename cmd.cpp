@@ -144,6 +144,20 @@ void CmdParam::process(CmdParam *table, const char *cmdline)
 }
 
 
+void CmdParam::print(const char *msg)
+    {
+        fputs(msg,stderr);
+    }
+
+void CmdParam::notfound(const char *cmdline, const char *cmd)
+    {
+      printfunc("Not found: ");
+      printfunc(cmd);
+      printfunc("\r\n"); 
+    }
+
+
+
 #if DEMO==1
 
 void help(unsigned int n, void *arg, const char *p); // forward refs

@@ -35,16 +35,8 @@
     static void process(CmdParam *table, const char *cmdline);
     // you can override these two for better control by setting
     // printfunc and notfoundfunc
-    static void print(const char *msg)
-    {
-        fputs(msg,stderr);
-    };
-    static void notfound(const char *cmdline, const char *cmd)
-    {
-      printfunc("Not found: ");
-      printfunc(cmd);
-      printfunc("\r\n"); 
-    };
+  static void print(const char *msg);
+  static void notfound(const char *cmdline, const char *cmd);
     // Get the doc string
   std::string &getDoc(void) { return cmddoc; };
 
