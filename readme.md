@@ -69,6 +69,9 @@ of each output line for things like help and error messages.
       }
     };
 
+Note that this is only a good idea if you derive a single class from the base class and then only use that class
+which is the usual case here. If you had objects of class CmdParam1, CmdParam2 (not shown), and CmdParam, they 
+would fight over the base class function pointer.
 
 A Few Ideas:
 ---------------
